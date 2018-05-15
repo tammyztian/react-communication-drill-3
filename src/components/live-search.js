@@ -32,7 +32,7 @@ export default class LiveSearch extends React.Component {
 
         return (
             <div className="live-search">
-                <SearchForm onChange={(value) => this.setState({searchTerm: value})}/>
+                <SearchForm onChange={(value) => this.setState({searchTerm: value.toLowerCase()})}/>
                 <CharacterCount count={characters.length} />
                 <CharacterList characters={characters} />
             </div>
